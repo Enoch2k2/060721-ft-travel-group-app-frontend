@@ -1,12 +1,24 @@
-import Home from './components/Home'
 
+import {BrowserRouter as Router,Route,Switch } from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
-function App() {
+const  App= ()=> {
   return (
-    <>
-   <h1>Welcome to Trip Traveler's Trusty Transit</h1>
-   <Home />
-   </>
+
+     <Router>
+       <Navbar/>
+       <Switch>
+         <Route to='/' exact>
+           <Home/>
+         </Route>
+         <Route to='/pointsofinterests/:id'>
+
+         </Route>
+
+       </Switch>
+     </Router>
+
   );
 }
 
