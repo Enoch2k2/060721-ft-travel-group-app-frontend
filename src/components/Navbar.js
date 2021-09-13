@@ -6,27 +6,29 @@ const Navbar = () => {
     <>
     <div className='absolute top-0 left-0 bottom-0
          bg-gradient-to-t from-blue-500 
-         via-purple-500 to-purple-700 w-12
+         via-purple-500 to-purple-700 
          flex flex-col '>
            <NavLink
            to='/'
            >
-             <i>
+          
           {icons[0].svg}
-          </i>
+         
              </NavLink>
              <NavLink
            to='/review'
-           >   <i >
+           >  
             {icons[3].svg}
-          </i>
+         
              </NavLink>
-          <i >
+             <NavLink to='/'>
             {icons[1].svg}
-          </i>
-          <i >
+         
+            </NavLink>
+            <NavLink to='/'>
             {icons[2].svg}
-          </i>
+            </NavLink>
+        
        
 
    </div>
