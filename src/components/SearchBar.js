@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 const SearchBar = () => {
   const [search, setSearch] = useState({searchTerm:"", sorting:""})
 
+  //TODO error in handle change
   const handleChange = e => {
     setSearch({
       [e.target.name]:e.target.value
