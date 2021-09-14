@@ -9,6 +9,7 @@ const  App= ()=> {
 
      <Router>
        <Navbar/>
+       <div className="ml-20">
        <Switch>
          <Route exact path='/'>
            <Home/>
@@ -19,8 +20,8 @@ const  App= ()=> {
          <Route exact path='/new'>
           <PointOfInterestForm />
          </Route>
-
        </Switch>
+        </div>
      </Router>
 
   );

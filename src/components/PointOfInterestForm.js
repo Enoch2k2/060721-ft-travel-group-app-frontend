@@ -25,7 +25,7 @@ const PointOfInterestForm = () => {
     }
 
   return (
-    <div className="ml-20 ">
+    <div >
       <h1 className="text-2xl">Create a Point of Interest</h1>
       <form onSubmit={handleSubmit}>
         <div className="p-2">
