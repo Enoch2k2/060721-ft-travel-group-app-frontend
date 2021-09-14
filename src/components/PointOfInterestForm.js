@@ -29,7 +29,7 @@ const PointOfInterestForm = () => {
       <h1 className="text-2xl">Create a Point of Interest</h1>
       <form onSubmit={handleSubmit}>
         <div className="p-2">
-          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Place..."/>
+          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Place..." autoFocus/>
         </div>
         <div className="p-2">
           <input type="text" name="city" value={form.city} onChange={handleChange} placeholder="City..."/>
@@ -41,7 +41,7 @@ const PointOfInterestForm = () => {
           <input type="text" name="lowestPrice" value={form.lowestPrice} onChange={handleChange} placeholder="Lowest Price..."/>
         </div>
         <div>
-          <button className="border-2 rounded-md bg-purple-500 p-1 text-white">Submit</button>
+          <button className="border-2 rounded-md bg-purple-500 p-1 text-white">Create a New Point of Interest</button>
         </div>
       </form>
       
