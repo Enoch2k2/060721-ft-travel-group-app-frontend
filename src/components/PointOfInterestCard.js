@@ -5,14 +5,18 @@ const PointOfInterestCard = ( { poi } ) => {
 
 
   return (
-    <div className="shadow-md flex-1 p-2 block">
-      <h3><Link to={`/pointsofinterests/${poi.id}`}>{poi.name}</Link></h3>
+
+    <Link className="" to="/">
+    <div className="shadow-md flex-1 p-1 block rounded-lg">
       <img className="card-img" src={poi.image} alt={`a nice place to visit in ${poi.city}`}/>
+      <h3 className="font-bold">{poi.name}</h3>
       <h4>{poi.city}</h4>
-      <span>{poi.rating}</span>
-      <span>{poi.reviews} reviews</span>
-      <span>{poi.pricePoint}</span>
+
+      <p>Rating:{poi.averageRating}</p>
+      <p>{poi.reviews} reviews </p>
+      <p>Price Range:{poi.pricePoint}</p>
     </div>
+    </Link>
   )
 }
 
