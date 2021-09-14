@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-   a {
+    a {
         @apply fill-current text-white  inline-block rounded-full m-1 p-2  transition-all hover:bg-black ;
+    }
+    input {
+        @apply border-2 border-gray-300 rounded-md
     }
   
 }
