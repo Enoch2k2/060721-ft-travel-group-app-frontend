@@ -14,9 +14,12 @@ const PointOfInterestDetails = () => {
         //For now, we'll make a "fetch" to access the dummyData with provided ID
 
         const poi = dummyData.find((item) => item.id == id)
-        setSelectedPOI(poi)
-        console.log(poi)
-        setPoiDataReady(true)
+        if (poi){
+            setSelectedPOI(poi)
+            setPoiDataReady(true)
+            console.log(poi)
+        }
+        return
     }, [])
 
 
