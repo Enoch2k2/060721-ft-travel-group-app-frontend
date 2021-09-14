@@ -4,7 +4,7 @@ const SearchBar = () => {
   const [search, setSearch] = useState({searchTerm:"", sorting:""})
 
   const handleChange = e => {
-    setSearch({
+    setSearch({...search,
       [e.target.name]:e.target.value
     })
   }
@@ -22,7 +22,7 @@ const SearchBar = () => {
         <input type="submit" placeholder='Search'/>
     
       
-          <select name="sorting">
+          <select className="border-2 border-gray-300" name="sorting">
             <option value="rating">Rating</option>
             <option value="pricePoint">Price Point</option>
           </select>

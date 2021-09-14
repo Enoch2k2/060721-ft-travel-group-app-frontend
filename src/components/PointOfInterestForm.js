@@ -1,0 +1,52 @@
+
+import React,  { useState } from 'react'
+
+const PointOfInterestForm = () => {
+
+  //NOTE: number of reviews/average rating should be handled by backend
+  const [form, setForm] = useState({
+      name: "",
+      city: "",
+      image: "",
+      lowestPrice: "",
+    })
+
+    const handleChange = e => {
+      setForm({...form, [e.target.name]:e.target.value})
+    }
+ 
+    const handleSubmit = async e => {
+      e.preventDefault()
+      // const method = "POST"
+      // const headers = {"Content-Type":"application/json"}
+      // const body = form
+      // const response = await fetch(``, {method:method,headers:headers, body:JSON.stringify(body)})
+      // const data = response.json()
+    }
+
+  return (
+    <div >
+      <h1 className="text-2xl">Create a Point of Interest</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="p-2">
+          <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Place..." autoFocus/>
+        </div>
+        <div className="p-2">
+          <input type="text" name="city" value={form.city} onChange={handleChange} placeholder="City..."/>
+        </div>
+        <div className="p-2">
+          <input type="text" name="image" value={form.image} onChange={handleChange} placeholder="Photo..."/>
+        </div>
+        <div className="p-2">
+          <input type="text" name="lowestPrice" value={form.lowestPrice} onChange={handleChange} placeholder="Lowest Price..."/>
+        </div>
+        <div>
+          <button className="border-2 rounded-md bg-purple-500 p-1 text-white">Create a New Point of Interest</button>
+        </div>
+      </form>
+      
+    </div>
+  )
+}
+
+export default PointOfInterestForm
