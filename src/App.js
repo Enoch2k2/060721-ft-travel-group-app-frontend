@@ -10,13 +10,12 @@ const  App= ()=> {
      <Router>
        <Navbar/>
        <Switch>
-         <Route to='/pointsofinterests/:id'>
+         <Route path='/pointsofinterests/:id'>
             <PointOfInterestDetails />
          </Route>
-         <Route to='/' exact>
+         <Route exact path='/'>
            <Home/>
          </Route>
-
        </Switch>
      </Router>
 

@@ -15,7 +15,7 @@ const Home = () => {
   //   console.log(pointsOfInterests)
   // }, [])
 
-
+  console.log('Home Rendering')
   return (
     <section className='pl-2'>
       <div className='main-content-container'>
@@ -26,6 +26,7 @@ const Home = () => {
           <SearchBar />
           <hr />
           <CardContainer pointsOfInterests={dummyData} />
+
 
         </div>
       </div>
