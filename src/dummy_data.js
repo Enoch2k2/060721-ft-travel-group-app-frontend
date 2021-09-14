@@ -10,7 +10,7 @@ const dummyData = [
     },
     {
       id: 2,
-      name: "Coffee Shop",
+      name: "Empire State Building",
       city: "New York",
       image: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
       averageRating: 3,
@@ -19,7 +19,7 @@ const dummyData = [
     },
     {
       id:3,
-      name: "Coffee Shop",
+      name: "Times Square",
       city: "New York",
       image: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
       averageRating: 1,
@@ -28,8 +28,8 @@ const dummyData = [
     },
     {
       id:4,
-      name: "Coffee Shop",
-      city: "New York",
+      name: "The Bean",
+      city: "Chicago",
       image: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
       averageRating: 1,
       pricePoint: "$2-$12",

@@ -2,7 +2,9 @@
 import {BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import PointOfInterestDetails from './components/PointOfInterestDetails';
 import PointOfInterestForm from './components/PointOfInterestForm';
+
 
 const  App= ()=> {
   return (
@@ -11,6 +13,9 @@ const  App= ()=> {
        <Navbar/>
        <div className="ml-20">
        <Switch>
+         <Route path='/pointsofinterests/:id'>
+            <PointOfInterestDetails />
+         </Route>
          <Route exact path='/'>
            <Home/>
          </Route>
