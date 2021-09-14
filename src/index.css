@@ -13,6 +13,6 @@
 }
 @layer components {
     .card-img {
-        @apply h-40 w-40
+        @apply w-full
     }
 }
