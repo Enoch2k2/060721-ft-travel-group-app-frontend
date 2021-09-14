@@ -18,16 +18,19 @@ const Home = () => {
 
   return (
     <section className='pl-2'>
-      <h2>Points of Interests</h2>
-       <div>
+      <div className='main-content-container'>
 
-        <SearchBar/>
-        <hr/>
-        <CardContainer pointsOfInterests={dummyData}/>
+        <h2>Points of Interests</h2>
+        <div>
 
+          <SearchBar />
+          <hr />
+          <CardContainer pointsOfInterests={dummyData} />
+
+        </div>
       </div>
     </section>
-   
+
   )
 }
 

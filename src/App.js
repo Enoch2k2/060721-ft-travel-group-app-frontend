@@ -2,6 +2,7 @@
 import {BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import PointOfInterestDetails from './components/PointOfInterestDetails';
 
 const  App= ()=> {
   return (
@@ -9,11 +10,11 @@ const  App= ()=> {
      <Router>
        <Navbar/>
        <Switch>
+         <Route to='/pointsofinterests/:id'>
+            <PointOfInterestDetails />
+         </Route>
          <Route to='/' exact>
            <Home/>
-         </Route>
-         <Route to='/pointsofinterests/:id'>
-
          </Route>
 
        </Switch>
