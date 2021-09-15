@@ -14,7 +14,7 @@ const PointOfInterestDetails = () => {
         //For now, we'll make a "fetch" to access the dummyData with provided ID
 
         const poi = dummyData.find((item) => item.id == id)
-        if (poi){
+        if (poi) {
             setSelectedPOI(poi)
             setPoiDataReady(true)
             console.log(poi)
@@ -27,14 +27,20 @@ const PointOfInterestDetails = () => {
         <div>
             {poiDataReady ?
                 <>
-                    <h3>{selectedPOI.name}</h3>
-                    <img className="card-img" src={selectedPOI.image} alt={`a nice place to visit in ${selectedPOI.city}`} />
-                    <h4>{selectedPOI.city}</h4>
-                    <span>{selectedPOI.rating}</span>
-                    <span>{selectedPOI.reviews} reviews</span>
-                    <span>{selectedPOI.pricePoint}</span>
+                    <div className="flex flex-col items-center 
+              justify-center pt-14" >
+
+                        <img className="card-img w-96" src={selectedPOI.image} alt={`a nice place to visit in ${selectedPOI.city}`} />
+                        <h3 className="text-2xl mb-4">{selectedPOI.name}  -  {selectedPOI.city}</h3>
+                        <span>Price Range: {selectedPOI.pricePoint}</span>
+                        <span>Number of Reviews: {selectedPOI.reviews}</span>
+                        <div className='flex flex-row justify-center'>
+                            <button className='m-5 border-2 border-purple-400 p-1 rounded'>Leave a Review</button>
+                            <button className='m-5 border-2 border-purple-400 p-1 rounded'> Add to Itinerary</button>
+                        </div>
+                    </div>
                 </>
-                : null }
+                : null}
 
 
         </div>

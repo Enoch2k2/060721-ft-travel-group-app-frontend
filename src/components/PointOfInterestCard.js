@@ -6,7 +6,7 @@ const PointOfInterestCard = ( { poi } ) => {
 
   return (
 
-    <Link className="" to="/">
+    <Link className="" to={`/pointsofinterests/${poi.id}`}>
     <div className="shadow-md flex-1 p-1 block rounded-lg">
       <img className="card-img" src={poi.image} alt={`a nice place to visit in ${poi.city}`}/>
       <h3 className="font-bold">{poi.name}</h3>

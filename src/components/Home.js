@@ -25,8 +25,8 @@ const Home = () => {
 
           <SearchBar />
           <hr />
-          <CardContainer pointsOfInterests={dummyData} />
 
+          <CardContainer pointsOfInterests={dummyData} />
 
         </div>
       </div>
