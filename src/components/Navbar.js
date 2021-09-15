@@ -8,29 +8,40 @@ const Navbar = () => {
          bg-gradient-to-t from-blue-500 
          via-purple-500 to-purple-700 
          flex flex-col '>
-           <NavLink
+           <div className='flex flex-col'>
+               <NavLink
            to='/'
            >
-          
+          <i>
           {icons[0].svg}
-         
+         </i>
              </NavLink>
              <NavLink
            to='/review'
            >  
+           <i>
             {icons[3].svg}
-         
+         </i>
              </NavLink>
              <NavLink to='/'>
-            {icons[1].svg}
-         
+            <i>
+              {icons[1].svg}
+         </i>
             </NavLink>
             <NavLink to='/'>
-            {icons[2].svg}
+            <i>{icons[2].svg}</i>
             </NavLink>
-        
-       
+            <NavLink to='/new'>
+           <i> {icons[4].svg} </i>
+            </NavLink>
+           </div>
+           <div>
+               <NavLink to='/login'>
+           <i> {icons[5].svg} </i>
+            </NavLink>
 
+           </div>
+          
    </div>
     
  
