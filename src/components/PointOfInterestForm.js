@@ -1,8 +1,12 @@
 
 import React,  { useState } from 'react'
 import icons from '../data'
+import { baseUrl } from '../Globals'
+import { useHistory } from 'react-router-dom'
+
 const PointOfInterestForm = () => {
 
+  const history = useHistory()
   //NOTE: number of reviews/average rating should be handled by backend
   const [form, setForm] = useState({
       name: "",
@@ -17,11 +21,13 @@ const PointOfInterestForm = () => {
  
     const handleSubmit = async e => {
       e.preventDefault()
-      // const method = "POST"
-      // const headers = {"Content-Type":"application/json"}
-      // const body = form
-      // const response = await fetch(``, {method:method,headers:headers, body:JSON.stringify(body)})
-      // const data = response.json()
+      const method = "POST"
+      const headers = {"Content-Type":"application/json"}
+      const body = form
+      const response = await fetch(`${baseUrl}`, {method:method,headers:headers, body:JSON.stringify(body)})
+      const data = response.json()
+      //TODO redirect after creation
+      history.push(`/pointsofinterests/${data.id}`)
     }
 
   return (
