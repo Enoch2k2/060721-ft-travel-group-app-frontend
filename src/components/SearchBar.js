@@ -1,24 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
+import useHandleForm from '../hooks/useHandleForm'
 
 const SearchBar = () => {
-  const [search, setSearch] = useState({searchTerm:"", sorting:""})
+  //useHandleForm replaces the need for state and a handlechange funciton
+  const [form, handleForm] = useHandleForm({searchTerm:"", sorting:""})
+  // debugger
+  // const [search, setSearch] = useState({searchTerm:"", sorting:""})
 
-  const handleChange = e => {
-    setSearch({...search,
-      [e.target.name]:e.target.value
-    })
-  }
+  // const handleChange = e => {
+  //   setSearch({...search,
+  //     [e.target.name]:e.target.value
+  //   })
+  // }
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(search)
+    console.log(form)
   }
 
   return (
 
       <form onSubmit={handleSubmit}>
      
-        <input type="text" name="search" value={search.search} onChange={handleChange}placeholder="Search..."/>
+        <input type="text" name="searchTerm" value={form.searchTerm} onChange={e => handleForm(e)} placeholder="Search..."/>
         <input type="submit" placeholder='Search'/>
     
       

@@ -1,6 +1,7 @@
 
 import React,  { useState } from 'react'
 import icons from '../data'
+import useHandleForm from '../hooks/useHandleForm'
 import { baseUrl } from '../Globals'
 import { useHistory } from 'react-router-dom'
 
@@ -8,16 +9,16 @@ const PointOfInterestForm = () => {
 
   const history = useHistory()
   //NOTE: number of reviews/average rating should be handled by backend
-  const [form, setForm] = useState({
+  const [form, handleChange] = useHandleForm({
       name: "",
       city: "",
       image: "",
       lowestPrice: "",
     })
 
-    const handleChange = e => {
-      setForm({...form, [e.target.name]:e.target.value})
-    }
+    // const handleChange = e => {
+    //   setForm({...form, [e.target.name]:e.target.value})
+    // }
  
     const handleSubmit = async e => {
       e.preventDefault()

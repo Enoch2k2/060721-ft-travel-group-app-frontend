@@ -1,20 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const useHandleForm = () => {
+const useHandleForm = (initialForm) => {
   const [form, setForm] = useState(initialForm)
 
   const handleChange = e => {
-    setForm({...form,
-      [e.target.name] : e.target.value}
+    setForm(
+      {...form,
+      [e.target.name]:e.target.value}
       )
+      console.log(e.key)
   }
-
-
-  return (
-    <div>
-      
-    </div>
-  )
+  return [form, handleChange]
 }
 
 export default useHandleForm
