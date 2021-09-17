@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
 import { Link } from "react-router-dom"
-import CardContainer from "./CardContainer"
+import CardContainer from "../POI/CardContainer"
 import SearchBar from './SearchBar'
-import dummyData from '../dummy_data'
+import dummyData from '../../dummy_data';
 
 const Home = () => {
   const [pointsOfInterests, setPointsOfInterests] = useState([])

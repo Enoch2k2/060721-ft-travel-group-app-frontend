@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
-import icons from '../data'
+import icons from '../../assets/icons/data'
 const Navbar = () => {
   return (
     <>
