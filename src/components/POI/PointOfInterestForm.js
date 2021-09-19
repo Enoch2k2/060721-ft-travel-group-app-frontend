@@ -1,6 +1,7 @@
 
 import React,  { useState } from 'react'
-import icons from '../data'
+import icons from '../../assets/icons/data'
+
 const PointOfInterestForm = () => {
 
   //NOTE: number of reviews/average rating should be handled by backend

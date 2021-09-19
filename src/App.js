@@ -1,19 +1,21 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import PointOfInterestDetails from './components/PointOfInterestDetails';
-import PointOfInterestForm from './components/PointOfInterestForm';
+import Navbar from './components/foundation/Navbar';
+import Home from './components/foundation/Home';
+import PointOfInterestDetails from './components/POI/PointOfInterestDetails';
+import PointOfInterestForm from './components/POI/PointOfInterestForm';
 
 
 const App = () => {
   return (
+<div className='container inset-0 flex 
+   box-shadow-md  
+'>
+
 
     <Router>
-
-      <div className='flex flex-row overscroll-auto'>
         <Navbar />
-        <div className="h-screen w-screen overflow-y-scroll overscroll-y-contain bg-blue-50">
+        {/* <div className="h-screen w-screen overflow-y-scroll overscroll-y-contain bg-blue-50"> */}
           <Switch>
             <Route path='/pointsofinterests/:id'>
               <PointOfInterestDetails />
@@ -21,17 +23,18 @@ const App = () => {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/test'>
-              <h1>Travelers' Tricks!</h1>
-            </Route>
+          
             <Route exact path='/new'>
               <PointOfInterestForm />
+            </Route> 
+             <Route path='/'>
+              <h1>this page does not exist</h1>
             </Route>
           </Switch>
-        </div>
+        {/* </div> */}
 
-      </div>
     </Router>
+</div>
 
   );
 }
