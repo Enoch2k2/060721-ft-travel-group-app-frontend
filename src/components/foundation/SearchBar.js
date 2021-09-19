@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import icons from '../../assets/icons/data'
+
 const SearchBar = () => {
   const [search, setSearch] = useState({searchTerm:"", sorting:""})
 
@@ -15,6 +16,7 @@ const SearchBar = () => {
   }
 
   return (
+
     <>
       <form onSubmit={handleSubmit} className='a-content'>
          <h1>Where are you going ? </h1>
@@ -32,6 +34,7 @@ const SearchBar = () => {
        
       </form>
   </>
+
   )
 }
 

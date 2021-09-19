@@ -22,7 +22,6 @@ let Background = "https://mosscm.com/wp-content/uploads/2017/11/news-dallas-skyl
            <span>{poi.reviews} reviews </span>
           <span>Price Range:{poi.pricePoint}</span>
       </div>
-    
     </div>
     </Link>
   )

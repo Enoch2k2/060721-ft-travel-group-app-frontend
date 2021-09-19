@@ -4,7 +4,9 @@ const CardContainer = ( { pointsOfInterests } ) => {
   console.log(pointsOfInterests)
 
   return (
+
     <div className="main">
+
       {pointsOfInterests.map( poi => <PointOfInterestCard key={poi.id} poi={poi} />)}
     </div>
   )

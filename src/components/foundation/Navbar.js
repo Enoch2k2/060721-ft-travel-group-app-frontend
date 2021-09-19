@@ -6,6 +6,7 @@ const Navbar = () => {
     <>
 
 
+
       <div
         className='sidebar'
           >
@@ -50,6 +51,7 @@ const Navbar = () => {
           </NavLink>
             <span >Explore</span>
         </div>
+
 
 
 
