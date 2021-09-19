@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import dummyData from '../../dummy_data';
+import dummyData from '../../assets/dummy_data'
+
 
 const PointOfInterestDetails = () => {
 

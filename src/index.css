@@ -4,19 +4,203 @@
 
 @layer base {
     i {
-        @apply  text-white  inline-block rounded-full m-1 p-2  transition-all hover:bg-black ;
+        @apply   flex items-center a-prams ;
+    }
+    span {
+        @apply  not-italic block sm:hidden xl:block ml-2 ;
     }
     input {
-        @apply appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white;
+        @apply appearance-none block border rounded p-2 ;
     }
-    /* button {
-        @apply bg-blue
-    } */
-  
+    body{
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        background: #e8ebf3;
+        margin: 0;
+        padding: 0;
+        background-color: #EEE;
+        box-sizing: border-box;
+        cursor: default;
+    }
+    h1{
+        font-size: 2em;
+        font-weight: bold;
+        color: #c3b7b7;
+        mix-blend-mode: difference;
+
+    }
+   
 }
+
+
 @layer components {
     .card-img {
-        @apply w-full
+        @apply w-full;
     }
-
-}
+    .a-content {
+        @apply flex  relative  w-full mb-5 ;
+    }
+    .search{
+        box-sizing: border-box;
+        position: relative;
+        height: 48px;
+        width: 100%;
+        background-color: #ffffff;
+        margin: 0;
+        line-height: 48px;
+        border-radius: 30px;
+        padding: 0 45px 0 20px;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        border-radius: 20px;
+        padding-right: 12px;
+        box-shadow: 0 2px 6px 0 rgb(136 148 171 / 20%), 0 24px 20px -24px rgb(71 82 107 / 10%);
+        overflow: hidden;
+    }
+    
+    .search-button{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--color);
+        z-index: 2;
+        font-size: 24px;
+        padding: 0;
+        border: none;
+    }
+    .a-prams {
+        box-sizing: border-box;
+        background-color: #ffffff;
+        width: 42px;
+        height: 42px;
+        padding: 11px;
+        display: flex;
+        align-items: center;
+        --tw-text-opacity: 1;
+        
+    }
+    
+    .picture {
+        top: 407px;
+        left: 13px;
+        /* background-color: var(--pink); */
+        width: 100px;
+        padding-bottom: 120px;
+        margin-top: 70px;
+        border: 10px solid #fff;
+        box-shadow: inset 0 -30px 0 0 #139da7;
+        transform: rotate(
+            -20deg);
+            filter: drop-shadow(12px 12px 0 rgb(6 117 128 / 20%));
+        }
+        .boat {
+            width: 36px;
+            bottom: 30px;
+            left: 20px;
+            border-top: 16px solid #ca325b;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        .clouds {
+            top: 10px;
+            left: 20px;
+            width: 30px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: -7px 9px 0 #fff;
+        }
+        .boat:before {
+            content: "";
+            position: absolute;
+            top: -46px;
+            left: 18px;
+            z-index: 1;
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-bottom-width: 16px;
+            border-top-width: 14px;
+            border-left: 19px solid var(--yellow);
+            transform: rotate(
+                6deg);
+                
+            } 
+    .clouds:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: -40px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--white);
+        border-radius: 50%;
+    }
+    img{
+        height : 200px;
+        background-color:#000;
+    }
+    img:hover{
+        transform: scale(1.125);
+    }
+    
+    .main{
+        width: calc(100% - 3rem);
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1.5rem;
+    }
+    .a-detail{
+        width: 100%;
+        position: relative;
+        padding: 0.5em 1em;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    .card {
+        background-position: center;
+        background-size: cover;
+        background-image: url(https://mosscm.com/wp-content/uploads/2017/11/news-dallas-skyline.jpg);
+    }
+    .card:hover{
+        transform: translate(0,-4px);
+        box-shadow: 0px 17px 19px -2px rgb(0 0 0 / 20%);
+    }
+    .container {
+        margin-left: calc((100% - 1000px) / 2);
+    }
+    .title{
+        font-size: 90px;
+        font-weight: bold;
+        margin-top: -10px;
+        margin-bottom: -75px;
+        font-family: 'Secular One', sans-serif;
+    }
+    .sidebar{
+        padding: 40px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar-link {
+        margin: 16px 0;
+        transition: 0.2s;
+        border-radius: 50%;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color : #1f1c2e;
+        color : #fff;
+        fill : #fff;
+    }       
+            
+ }
