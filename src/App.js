@@ -4,6 +4,7 @@ import Navbar from './components/foundation/Navbar';
 import Home from './components/foundation/Home';
 import PointOfInterestDetails from './components/POI/PointOfInterestDetails';
 import PointOfInterestForm from './components/POI/PointOfInterestForm';
+import Landing from './components/foundation/Landing';
 
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
             </Route>
             <Route exact path='/'>
               <Home />
+            </Route>
+            <Route exact path='/landing'>
+              <Landing />
             </Route>
           
             <Route exact path='/new'>

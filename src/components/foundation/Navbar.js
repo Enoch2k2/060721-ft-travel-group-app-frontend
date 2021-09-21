@@ -29,7 +29,7 @@ const Navbar = () => {
             </button>
           </NavLink>
               <span >reviews</span>
-          <NavLink to='/'>
+          <NavLink to='/landing'>
             <button className='sidebar-link'>
               {icons[1].svg}
 
