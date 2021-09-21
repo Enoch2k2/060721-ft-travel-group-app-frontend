@@ -26,7 +26,8 @@ const PointOfInterestForm = () => {
       const headers = {"Content-Type":"application/json"}
       const body = form
       const response = await fetch(`${baseUrl}`, {method:method,headers:headers, body:JSON.stringify(body)})
-      const data = response.json()
+      const data = await response.json()
+
       //TODO redirect after creation
       history.push(`/pointsofinterests/${data.id}`)
     }

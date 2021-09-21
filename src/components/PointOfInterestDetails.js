@@ -13,11 +13,8 @@ const PointOfInterestDetails = () => {
         const response = await fetch(`${baseUrl}/${id}`)
         const data = await response.json()
           // if (response.ok) { 
-            setSelectedPOI(data)
-          // } else {
-          //   handleErrors(data.errors)
-          // }
-        //   getData()
+        setSelectedPOI(data)
+        setPoiDataReady(true)
       }
 
     useEffect(() => {
@@ -25,13 +22,16 @@ const PointOfInterestDetails = () => {
         //Make backend call to fetch point of interest with given ID provided by Params.
         //For now, we'll make a "fetch" to access the dummyData with provided ID
 
-        const poi = dummyData.find((item) => item.id === id)
-        if (poi) {
-            setSelectedPOI(poi)
-            setPoiDataReady(true)
-            console.log(poi)
-        }
-        return
+        // const poi = dummyData.find((item) => item.id === id)
+        // if (poi) {
+        //     setSelectedPOI(poi)
+        //     setPoiDataReady(true)
+        //     console.log(poi)
+        // }
+        // return
+
+        getData()
+
     }, [id])
 
 

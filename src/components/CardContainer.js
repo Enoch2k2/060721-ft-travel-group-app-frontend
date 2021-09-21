@@ -8,7 +8,7 @@ const CardContainer = (  ) => {
   const [pointsOfInterests, setPointsOfInterests] = useState([])
 
   
-  // useEffect(() => {
+  useEffect(() => {
     const getData = async () => {
       const response = await fetch(`${baseUrl}`)
       const data = await response.json()
@@ -18,14 +18,14 @@ const CardContainer = (  ) => {
         //   handleErrors(data.errors)
         // }
     }
-  //   getData()
-  //   console.log(pointsOfInterests)
-  // }, [])
+    getData()
+    console.log(pointsOfInterests)
+  }, [])
 
 
   return (
     <div className="p-10 grid grid-cols-3 gap-x-6 gap-y-6">
-      {dummyData.map( poi => <PointOfInterestCard key={poi.id} poi={poi} />)}
+      {pointsOfInterests.map( poi => <PointOfInterestCard key={poi.id} poi={poi} />)}
     </div>
   )
 }
