@@ -87,7 +87,6 @@
     .picture {
         top: 407px;
         left: 13px;
-        /* background-color: var(--pink); */
         width: 100px;
         padding-bottom: 120px;
         margin-top: 70px;
@@ -144,9 +143,7 @@
         height : 200px;
         background-color:#000;
     }
-    img:hover{
-        transform: scale(1.125);
-    }
+ 
     
     .main{
         width: calc(100% - 3rem);
@@ -166,13 +163,13 @@
     .card {
         background-position: center;
         background-size: cover;
-        /* background-image: url(https://mosscm.com/wp-content/uploads/2017/11/news-dallas-skyline.jpg); */
     }
     .card:hover{
         transform: translate(0,-4px);
         box-shadow: 0px 17px 19px -2px rgb(0 0 0 / 20%);
     }
     .container {
+        max-width: 1024px;
         margin-left: calc((100% - 1000px) / 2);
     }
     .title{

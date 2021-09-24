@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import icons from '../../assets/icons/data'
 const PointOfInterestCard = ({ poi }) => {
 
-  // console.log(poi)
+  console.log("poi",poi)
   let Background = poi.image
   return (
 
