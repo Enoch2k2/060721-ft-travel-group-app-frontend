@@ -5,48 +5,56 @@ const Navbar = () => {
   return (
     <>
 
-      {/* absolute top-0 left-0 bottom-0 */}
-      {/* Changed this to flex-box positioning */}
 
-      <div className='
-         bg-gradient-to-t from-blue-500 
-         via-purple-500 to-purple-700 
-         flex flex-col'>
-        <div className='flex flex-col'>
+
+      <div
+        className='sidebar'
+          >
+       
           <NavLink
             to='/'
           >
-            <i>
-              {icons[0].svg}
-            </i>
+            <button className='sidebar-link' >
+              {icons[11].svg}
+            
+            </button>
           </NavLink>
+              <span >My plans</span>
           <NavLink
             to='/review'
           >
-            <i>
+            <button className='sidebar-link'>
               {icons[3].svg}
-            </i>
+
+            </button>
           </NavLink>
-          <NavLink to='/'>
-            <i>
+              <span >reviews</span>
+          <NavLink to='/landing'>
+            <button className='sidebar-link'>
               {icons[1].svg}
-            </i>
+
+            </button>
           </NavLink>
-          <NavLink to='/'>
-            <i>{icons[2].svg}</i>
-          </NavLink>
+              <span >Profile</span>
+         
           <NavLink to='/new'>
-            <i> {icons[4].svg} </i>
+            <button className='sidebar-link'> {icons[4].svg}
+            
+             </button>
           </NavLink>
-        </div>
-        <div>
+            <span >create</span>
+        
           <NavLink to='/login'>
-            <i> {icons[5].svg} </i>
+            <button className='sidebar-link'> {icons[10].svg}
+            
+             </button>
           </NavLink>
-
+            <span >Explore</span>
         </div>
 
-      </div>
+
+
+
 
 
     </>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import dummyData from '../../dummy_data';
+import dummyData from '../../assets/dummy_data'
+import { baseUrl, useDummyData } from '../../Globals';
 
 const PointOfInterestDetails = () => {
 
@@ -8,19 +9,34 @@ const PointOfInterestDetails = () => {
     const [poiDataReady, setPoiDataReady] = useState(false)
     const [selectedPOI, setSelectedPOI] = useState()
 
+    const getData = async () => {
+        try {
+            const response = await fetch(`${baseUrl}/${id}`)
+            const data = await response.json()
+            setSelectedPOI(data)
+            setPoiDataReady(true)
+        } catch (error) {
+            console.log(error)
+            console.log('Make sure back end is running!')
+        }
+      }
+
     useEffect(() => {
 
-        //Make backend call to fetch point of interest with given ID provided by Params.
-        //For now, we'll make a "fetch" to access the dummyData with provided ID
+        // If global useDummyData is set to true, we will use dummy data. else, we will make back
+        // end call to rails.
 
-        const poi = dummyData.find((item) => item.id == id)
-        if (poi) {
-            setSelectedPOI(poi)
-            setPoiDataReady(true)
-            console.log(poi)
+        if (useDummyData) {
+            const poi = dummyData.find((item) => item.id == id)
+            if (poi) {
+                setSelectedPOI(poi)
+                setPoiDataReady(true)
+            }
+        } else {
+            getData()
         }
-        return
-    }, [])
+
+    }, [id])
 
 
     return (

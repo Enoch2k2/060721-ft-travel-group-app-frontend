@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import CardContainer from "../POI/CardContainer"
 import SearchBar from './SearchBar'
-import dummyData from '../../dummy_data';
+// import dummyData from '../../assets/dummy_data'
+
 
 const Home = () => {
-  const [pointsOfInterests, setPointsOfInterests] = useState([])
+  // const [pointsOfInterests, setPointsOfInterests] = useState([])
 
 
 
@@ -15,21 +16,16 @@ const Home = () => {
   //   console.log(pointsOfInterests)
   // }, [])
 
-  console.log('Home Rendering')
+
+  // console.log('Home Rendering')
   return (
-    <section className='pl-2'>
-      <div className='main-content-container'>
-
-        <h2>Points of Interests</h2>
-        <div>
-
+    <section className='p-4 '>
+     
           <SearchBar />
-          <hr />
+          <CardContainer />
 
-          <CardContainer pointsOfInterests={dummyData} />
+      
 
-        </div>
-      </div>
     </section>
 
   )
