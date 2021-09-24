@@ -16,7 +16,7 @@ const App = () => {
 
     <Router>
         <Navbar />
-        {/* <div className="h-screen w-screen overflow-y-scroll overscroll-y-contain bg-blue-50"> */}
+       
           <Switch>
             <Route path='/pointsofinterests/:id'>
               <PointOfInterestDetails />
@@ -35,7 +35,7 @@ const App = () => {
               <h1>this page does not exist</h1>
             </Route>
           </Switch>
-        {/* </div> */}
+      
 
     </Router>
 </div>

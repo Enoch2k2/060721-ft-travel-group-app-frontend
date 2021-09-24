@@ -166,7 +166,7 @@
     .card {
         background-position: center;
         background-size: cover;
-        background-image: url(https://mosscm.com/wp-content/uploads/2017/11/news-dallas-skyline.jpg);
+        /* background-image: url(https://mosscm.com/wp-content/uploads/2017/11/news-dallas-skyline.jpg); */
     }
     .card:hover{
         transform: translate(0,-4px);

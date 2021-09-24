@@ -20,13 +20,12 @@ const Home = () => {
   // console.log('Home Rendering')
   return (
     <section className='p-4 '>
-      <div className='main-content-container'>
+     
           <SearchBar />
           <CardContainer />
 
       
 
-      </div>
     </section>
 
   )
