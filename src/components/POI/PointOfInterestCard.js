@@ -18,10 +18,10 @@ const PointOfInterestCard = ({ poi }) => {
     </div>
       <div className='a-detail'>
           <span className="font-bold">{poi.name}</span>
-            <span>{poi.city}</span>
-              <span>Rating:{poi.averageRating}</span>
-           <span>{poi.reviews} reviews </span>
-          <span>Price Range:{poi.pricePoint}</span>
+           
+              <span>Rating:{poi.average_rating}</span>
+           <span>{poi.num_reviews} reviews </span>
+          <span>Price Range:{poi.price_point}</span>
       </div>
     </div>
     </Link>

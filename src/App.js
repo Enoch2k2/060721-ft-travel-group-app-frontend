@@ -5,18 +5,17 @@ import Home from './components/foundation/Home';
 import PointOfInterestDetails from './components/POI/PointOfInterestDetails';
 import PointOfInterestForm from './components/POI/PointOfInterestForm';
 import Landing from './components/foundation/Landing';
+import Header from './components/foundation/Header';
 
 
 const App = () => {
   return (
-<div className='container inset-0 flex 
-   box-shadow-md  
-'>
+    <>
+  
 
 
     <Router>
         <Navbar />
-       
           <Switch>
             <Route path='/pointsofinterests/:id'>
               <PointOfInterestDetails />
@@ -38,7 +37,8 @@ const App = () => {
       
 
     </Router>
-</div>
+
+</>
 
   );
 }

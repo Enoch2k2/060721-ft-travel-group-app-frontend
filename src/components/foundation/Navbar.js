@@ -5,56 +5,74 @@ const Navbar = () => {
   return (
     <>
 
-
+        <header>
+            <section className='nav-header'>
+              <div className='logo'>
+                 <i className='logo-i'>
+                {icons[12].svg}
+                 </i>
+              <h1>Travel</h1>
+           </div>
 
       <div
         className='sidebar'
-          >
-       
+        >
+         
           <NavLink
             to='/'
-          >
+            >
             <button className='sidebar-link' >
-              {icons[11].svg}
+              {/* {icons[11].svg} */}
             
+              <span >My plans</span>
             </button>
           </NavLink>
-              <span >My plans</span>
           <NavLink
             to='/review'
-          >
+            >
             <button className='sidebar-link'>
-              {icons[3].svg}
+              {/* {icons[3].svg} */}
+              <span >reviews</span>
 
             </button>
           </NavLink>
-              <span >reviews</span>
           <NavLink to='/landing'>
             <button className='sidebar-link'>
-              {icons[1].svg}
+              {/* {icons[1].svg} */}
+              <span >Profile</span>
 
             </button>
           </NavLink>
-              <span >Profile</span>
          
           <NavLink to='/new'>
-            <button className='sidebar-link'> {icons[4].svg}
+            <button className='sidebar-link'> 
+            {/* {icons[4].svg} */}
             
-             </button>
-          </NavLink>
             <span >create</span>
+             </button>
+          </NavLink>
         
-          <NavLink to='/login'>
-            <button className='sidebar-link'> {icons[10].svg}
+          <NavLink to='/explore'>
+            <button className='sidebar-link'> 
+            {/* {icons[10].svg} */}
+            <span >Explore</span>
             
              </button>
           </NavLink>
-            <span >Explore</span>
+          <NavLink to='/signin'>
+            <button className='sidebar-link'> 
+            {/* {icons[10].svg} */}
+            <span >Sign in</span>
+            
+             </button>
+          </NavLink>
         </div>
 
 
 
+              </section>
 
+            </header>
 
 
     </>
